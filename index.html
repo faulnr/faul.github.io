@@ -42,9 +42,12 @@
               <div class="circle"></div>
             </li>
           </ul>
-        </div>
-        <div class="nav-button">
-          <a href="assets/images/CV FAUL NUR ROHMAN (1).pdf" class="btn">Download CV <i class="uil uil-file-alt"></i></a>
+
+          <div class="toggle-btn" id="btndark">
+           <span id="btntext">Dark</span>
+           <img src="assets/images/moon.png" id="btnicon">
+          </div>
+
         </div>
         <div class="nav-menu-btn">
           <i class="uil uil-bars" onclick="myMenuFunction()"></i>
@@ -180,13 +183,13 @@
               </div>
             </div>
             <div class="col">
+
               <form name="contact-form">
               <div class="form-control">
-                <div class="form-inputs">
-                    <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
-                      <strong>Terimakasih!</strong> Pesan sudah kami terima.
-                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
+                <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+                  <strong>Terimakasih!</strong> Pesan sudah kami terima.
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>                <div class="form-inputs">
                   <input type="text" class="input-field" placeholder="Name" name="nama"/>
                   <input type="text" class="input-field" placeholder="Email" name="email"/>
                 </div>
@@ -276,6 +279,24 @@
             console.log("Success!", response)})
           .catch((error) => console.error("Error!", error.message));
       });
+    </script>
+    <!-- dark -->
+    <script>
+        let btndark = document.getElementById("btndark");
+        let btntext = document.getElementById("btntext");
+        let btnicon = document.getElementById("btnicon");
+
+        btndark.onclick = function(){
+          document.body.classList.toggle("dark-theme");
+
+        if(document.body.classList.contains("dark-theme")){
+          btnicon.src = "assets/images/sun.png";
+          btntext.innerHTML = "Light";
+        }else{
+          btnicon.src = "assets/images/moon.png";
+          btntext.innerHTML = "Dark";
+        }
+      }
     </script>
   </body>
 </html>

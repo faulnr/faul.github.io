@@ -74,6 +74,7 @@ i {
 /* ------- BASE -------- */
 body {
   background: var(--body-color);
+  transition: all 2s;
 }
 .container {
   width: 100%;
@@ -111,6 +112,7 @@ nav {
 .nav-menu,
 .nav_menu_list {
   display: flex;
+  padding-bottom: 50px;
 }
 .nav-menu .nav_list {
   list-style: none;
@@ -503,7 +505,8 @@ footer {
   background: #f8f8f8;
   padding-block: 40px 60px;
 }
-.top-footer p {
+.top-footer {
+  justify-items: center;
   font-size: 25px;
   font-weight: 600;
 }
@@ -560,10 +563,11 @@ footer {
     width: 100%;
     min-height: 450px;
     height: 90vh;
-    transition: 0.3s;
+    transition: 0.5s;
   }
   .nav_menu_list {
     flex-direction: column;
+    left: -00%;
   }
   .nav-menu-btn {
     display: flex;
@@ -638,4 +642,77 @@ footer {
 }
 .d-none {
   display: none !important;
+}
+
+/* tema dark */
+.dark-theme {
+  --body-color: rgb(26, 22, 22);
+  --color-white: rgb(26, 22, 22);
+
+  --text-color-second: rgb(253, 252, 252);
+  --text-color-third: rgb(30, 159, 171);
+
+  --first-color: rgb(110, 87, 224);
+  --first-color-hover: rgb(40, 91, 212);
+
+  --second-color: rgb(0, 201, 255);
+  --third-color: rgb(192, 166, 49);
+  --first-shadow-color: rgb(252, 251, 251);
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 30px;
+    background: rgb(26, 22, 22);
+    padding-block: 40px 60px;
+  }
+  .top-footer {
+    color: #fff;
+    justify-items: center;
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .middle-footer .footer-menu {
+    display: flex;
+  }
+  .footer_menu_list {
+    list-style: none;
+  }
+  .footer_menu_list a {
+    text-decoration: none;
+    color: var(--text-color-second);
+    font-weight: 500;
+    margin-inline: 20px;
+  }
+  .footer-social-icons {
+    display: flex;
+    gap: 30px;
+  }
+  .bottom-footer {
+    color: #fff;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 16px;
+  right: 10px;
+  background: #4864ff;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.toggle-btn img {
+  width: 25px;
+  margin-left: 10px;
 }
