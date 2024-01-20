@@ -104,3 +104,6 @@ function scrollActive() {
 }
 
 window.addEventListener("scroll", scrollActive);
+
+const body = document.body;
+const toggleBtn = document.querySelector(".toggle-btn");

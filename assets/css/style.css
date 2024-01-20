@@ -15,6 +15,7 @@
   --second-color: rgb(0, 201, 255);
   --third-color: rgb(192, 166, 49);
   --first-shadow-color: rgba(0, 0, 0, 0.1);
+  transition: background-color 0.8s, color 0.8s;
 }
 
 /* ----- BASE ----- */
@@ -23,6 +24,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  transition: background-color 0.8s, color 0.8s;
 }
 
 /* ----- SMOOTH SCROLL ----- */
@@ -75,7 +77,7 @@ i {
 /* ------- BASE -------- */
 body {
   background: var(--body-color);
-  transition: all 2s;
+  transition: --body-color 0.8s;
 }
 .container {
   width: 100%;
@@ -94,6 +96,7 @@ nav {
   padding-inline: 9vw;
   transition: 0.3s;
   z-index: 100;
+  transition: background-color 0.8s, color 0.8s;
 }
 .nav-logo {
   position: relative;
@@ -505,6 +508,7 @@ footer {
   row-gap: 30px;
   background: #f8f8f8;
   padding-block: 40px 60px;
+  transition: background-color 0.8s;
 }
 .top-footer {
   justify-items: center;
@@ -659,6 +663,7 @@ footer {
   --second-color: rgb(0, 201, 255);
   --third-color: rgb(192, 166, 49);
   --first-shadow-color: rgb(252, 251, 251);
+  transition: background-color 0.8s, color 0.8s;
 
   footer {
     display: flex;
@@ -711,6 +716,7 @@ footer {
   height: 40px;
   border-radius: 20px;
   cursor: pointer;
+  transition: background-color 0.4s;
 }
 
 .toggle-btn img {
